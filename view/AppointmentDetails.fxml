@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="249.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentDetailsController">
+   <children>
+      <VBox prefHeight="284.0" prefWidth="290.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="332.0">
+               <children>
+                  <Label text="Appointment Details" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER_RIGHT">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.5" minWidth="10.0" prefWidth="79.5" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.5" minWidth="10.0" prefWidth="210.5" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="End:" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="Start:" GridPane.rowIndex="6" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="URL:" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="Contact:" GridPane.rowIndex="3" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="Location:" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="17.0" minWidth="70.0" text="Description:" GridPane.rowIndex="1" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="10.0" layoutY="227.0" minWidth="70.0" text="Title:" />
+                  <Label fx:id="titleTxt" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="descriptionTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="locationTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="contactTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="urlTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="startTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="endTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER_RIGHT" minWidth="70.0" text="Type:" GridPane.rowIndex="4" />
+                  <Label fx:id="typeTxt" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="290.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionOpenAppointmentList" text="Cancel">
+                     <HBox.margin>
+                        <Insets right="12.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#65db3d3a" height="200.0" layoutX="-51.0" layoutY="-171.0" stroke="BLACK" strokeType="INSIDE" width="341.0" />
+   </children>
+</AnchorPane>

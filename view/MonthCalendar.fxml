@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="651.0" maxWidth="840.0" minHeight="579.0" minWidth="840.0" prefHeight="582.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MonthCalendarController">
+   <children>
+      <HBox alignment="BOTTOM_RIGHT" layoutX="-2.0" layoutY="519.0" prefHeight="60.0" prefWidth="839.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="352.0">
+               <children>
+                  <Label fx:id="monthLbl" text="Label">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="3.0" left="7.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="60.0" prefWidth="484.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionOpenAddAppointment" text="ADD APPOINTMENT">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="6.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActinoOpenUpdateAppointment" text="UPDATE APPOINTMENT">
+                     <HBox.margin>
+                        <Insets bottom="3.0" left="4.0" right="6.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionOpenWeekView" text="WEEK VIEW">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" right="4.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onActionOpenMainMenu" text="EXIT">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="3.0" right="4.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <VBox layoutY="18.0" maxWidth="840.0" minWidth="840.0" prefHeight="500.0" prefWidth="840.0">
+         <children>
+            <GridPane maxHeight="500.0" maxWidth="840.0" minHeight="500.0" minWidth="840.0" prefHeight="356.0" prefWidth="707.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="d1" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="98.0" prefWidth="126.0" text="Label" />
+                  <Label fx:id="d2" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" />
+                  <Label fx:id="d3" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="2" />
+                  <Label fx:id="d4" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="3" />
+                  <Label fx:id="d5" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="4" />
+                  <Label fx:id="d6" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="5" />
+                  <Label fx:id="d7" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="6" />
+                  <Label fx:id="d8" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.rowIndex="1" />
+                  <Label fx:id="d9" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="d10" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="d11" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="d12" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="490.0" layoutY="111.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label fx:id="d13" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Label fx:id="d14" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                  <Label fx:id="d15" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.rowIndex="2" />
+                  <Label fx:id="d16" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="d17" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="d18" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="d19" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="d20" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Label fx:id="d33" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="370.0" layoutY="211.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label fx:id="d32" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label fx:id="d31" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label fx:id="d30" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="d29" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.rowIndex="4" />
+                  <Label fx:id="d28" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                  <Label fx:id="d27" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Label fx:id="d26" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label fx:id="d25" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label fx:id="d24" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="d23" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="d22" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.rowIndex="3" />
+                  <Label fx:id="d21" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                  <Label fx:id="d34" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="730.0" layoutY="211.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Label fx:id="d35" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="10.0" layoutY="11.0" prefHeight="98.0" prefWidth="126.0" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <Line endX="740.0" layoutX="100.0" layoutY="120.0" startX="-100.0" />
+      <Line endX="740.0" layoutX="100.0" layoutY="220.0" startX="-100.0" />
+      <Line endX="760.0" endY="-2.5" layoutX="80.0" layoutY="320.0" startX="-100.0" />
+      <Line endX="760.0" layoutX="80.0" layoutY="420.0" startX="-100.0" />
+      <Line endX="760.0" layoutX="80.0" layoutY="520.0" startX="-100.0" />
+      <Line endX="240.0" endY="461.5" layoutX="-120.0" layoutY="59.0" startX="240.0" startY="-39.0" />
+      <Line endX="240.0" endY="450.5" layoutY="69.0" startX="240.0" startY="-49.0" />
+      <Line endX="240.0" endY="410.5" layoutX="120.0" layoutY="110.0" startX="240.0" startY="-90.0" />
+      <Line endX="240.0" endY="416.5" layoutX="240.0" layoutY="104.0" startX="240.0" startY="-84.0" />
+      <Line endX="240.0" endY="421.5" layoutX="360.0" layoutY="99.0" startX="240.0" startY="-79.0" />
+      <Line endX="240.0" endY="446.5" layoutX="480.0" layoutY="73.0" startX="240.0" startY="-53.0" />
+      <Line endX="744.0" layoutX="96.0" layoutY="19.0" startX="-95.99999237060547" />
+      <HBox prefHeight="19.0" prefWidth="840.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="SUNDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="MONDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="130.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="TUESDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="250.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="WEDNESDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="370.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="THURSDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="490.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="FRIDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="610.0" layoutY="10.0" prefHeight="19.0" prefWidth="120.0">
+               <children>
+                  <Label text="SATURDAY">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4bb266" height="19.0" layoutX="1.0" opacity="0.15" stroke="BLACK" strokeType="INSIDE" width="841.0" />
+   </children>
+</AnchorPane>
